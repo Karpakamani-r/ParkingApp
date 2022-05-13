@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="slot"
+            type="com.w2c.parkingapp.admin.addslot.Slot" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvSlotId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Slot ID: %d&quot;,slot.id)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Slot ID" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Parking Address: %s&quot;,slot.pAddress)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlotId"
+            tools:text="Parking Address" />
+
+        <TextView
+            android:id="@+id/tvSlotNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Slot #: %s&quot;,slot.slotNumber)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+            tools:text="Slot ID" />
+
+        <LinearLayout
+            android:id="@+id/linearSlots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSlotNo" />
+
+        <Button
+            android:id="@+id/btnBookSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/book_slot"
+            app:layout_constraintEnd_toEndOf="@+id/tvAddress"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearSlots" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

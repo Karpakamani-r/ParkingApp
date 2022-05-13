@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Parking App</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="login_title">Login As %s</string>
+    <string name="not_yet_registered">Not yet registered? click here</string>
+    <string name="reg_title">New user signup</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="user_type">User Type</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+
+    <string name="view_bookings">View Bookings</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="add_slot">Add Slot</string>
+    <string name="slots">Slot Numbers(For Ex: 1,2,3)</string>
+    <string name="add_slot_info">*Please specify the multiple slot numbers by separating (,)comma</string>
+    <string name="search_bookings_by_id_name_phone_of_the_user">Search bookings by BookingID/ID of the user</string>
+    <string name="park_app_abstract">With a rapid increase in the vehicle usage in the recent past,
+        finding and reaching a free parking slot has become time consuming and tedious,
+        especially in the metro cities.
+        The main aim of this project is to present a mobile-based system that enables users to view and reserve a parking slot.</string>
+    <string name="user_reg_link">If you are an user click here to proceed.</string>
+    <string name="admin_reg_link">For admin click here.</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="view_address">Parking Locations</string>
+    <string name="book_slot">Book A Slot</string>
+    <string name="search">Search</string>
+    <string name="search_address">Search address</string>
+    <string name="account_balance_is_d">Account Balance is %d</string>
+    <string name="enter_amount_inr">Enter Amount(INR)</string>
+    <string name="load_money">Load Money</string>
+
+</resources>

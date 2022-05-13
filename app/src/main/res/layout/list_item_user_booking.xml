@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="booking"
+            type="com.w2c.parkingapp.admin.book.Booking" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvSlotId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Booking ID: %d&quot;,booking.id)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Slot ID" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Parking Address: %s&quot;,booking.pAddress)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlotId"
+            tools:text="Parking Address" />
+
+        <TextView
+            android:id="@+id/tvSlotNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Slot Id: %s&quot;,booking.slotId)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+            tools:text="Slot ID" />
+
+        <TextView
+            android:id="@+id/tvSlotNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Slot No: %s&quot;,booking.slotNumber)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlotNo"
+            tools:text="Slot ID" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(&quot; Booking Status: %s&quot;,booking.status)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlotNumber"
+            tools:text="Slot ID" />
+
+        <ImageView
+            android:id="@+id/ivQR"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_baseline_qr_code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
